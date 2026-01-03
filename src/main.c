@@ -208,6 +208,11 @@ int main(void) {
 
 		UpdateMusicStream(background_music);
 
+		// Check for ESC key to quit
+		if (IsKeyPressed(KEY_ESCAPE)) {
+			break;
+		}
+
 		// update game logic
 		mouse = GetMousePosition();
 		if (tile_state == STATE_IDLE && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {

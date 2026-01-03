@@ -67,6 +67,7 @@ Or use the run script:
 
 - **Left Click**: Select a tile
 - **Left Click (adjacent tile)**: Swap tiles
+- **ESC Key**: Quit game
 - **Close Window**: Exit game
 
 ## Assets
