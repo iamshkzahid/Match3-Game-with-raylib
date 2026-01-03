@@ -1,0 +1,43 @@
+# Compiled binaries
+main
+*.exe
+*.out
+*.o
+*.a
+*.dylib
+*.so
+*.dll
+
+# Build artifacts
+*.obj
+*.pch
+*.ilk
+*.pdb
+*.exp
+*.lib
+
+# IDE files
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Visual Studio files
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archive files
+*.tar.gz
+*.zip
+
+# Temporary files
+*.tmp
+*.log
+
