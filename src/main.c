@@ -189,6 +189,7 @@ int main(void) {
 	InitAudioDevice();
 
 	background = LoadTexture("assets/background.jpg");
+	TraceLog(LOG_INFO, "Background texture ID: %d", background.id);
 	score_font = LoadFontEx("assets/04b03.ttf", SCORE_FONT_SIZE, NULL, 0);
 	background_music = LoadMusicStream("assets/bgm_old.mp3");
 	match_sound = LoadSound("assets/match.mp3");
@@ -298,22 +299,18 @@ int main(void) {
 		
 
 		BeginDrawing();
-		ClearBackground(BLACK);
+
+		ClearBackground(BLACK);   // keep this FIRST
 
 		DrawTexturePro(
-			background,
-			(Rectangle) {
-			0, 0, background.width, background.height
-		},
-			(Rectangle) {
-			0, 0, GetScreenWidth(), GetScreenHeight()
-		},
-			(Vector2) {
-			0, 0
-		},
-			0.0f,
-			WHITE
-		);
+    			background,
+    			(Rectangle){ 0, 0, background.width, background.height },
+    			(Rectangle){ 0, 0, GetScreenWidth(), GetScreenHeight() },
+    			(Vector2){ 0, 0 },
+    			0.0f,
+    			WHITE
+);
+
 
 		DrawRectangle(
 			grid_origin.x,
