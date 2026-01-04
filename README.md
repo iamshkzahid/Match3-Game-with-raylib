@@ -139,6 +139,12 @@ The game requires the following files inside the `assets/` directory:
 
 ---
 
+## 📸 Screenshot
+
+![Match-3 Gameplay](screenshots/gameplay.png)
+
+---
+
 ## 🧩 Known Limitations
 
 * macOS-only (Apple Silicon)
