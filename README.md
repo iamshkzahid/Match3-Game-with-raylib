@@ -143,7 +143,9 @@ The game requires the following files inside the `assets/` directory:
 
 ## 📸 Screenshot
 
-![Match-3 Gameplay](./screenshots/gameplay.png)
+<p align="center">
+  <img src="screenshots/Screenshot 2026-01-04 at 10.03.37 AM.png" alt="Match-3 Gameplay" width="600">
+</p>
 
 ---
 
