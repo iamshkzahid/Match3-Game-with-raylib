@@ -1,5 +1,11 @@
 # Match-3 Game (C + raylib)
 
+<p align="center">
+  <img src="screenshots/gameplay.png" alt="Match-3 Gameplay" width="600">
+</p>
+
+A classic Match-3 puzzle game written in C using raylib.
+
 A classic **Match-3 puzzle game** written in **C** using the **raylib** graphics and audio library.
 The game features smooth tile animations, score effects, background music, and sound effects.
 
