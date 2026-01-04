@@ -41,26 +41,23 @@ make
 
 ## Building
 
-```bash
-make
-```
+brew install raylib pkg-config
+
+gcc src/main.c -o match3 \
+$(pkg-config --cflags raylib) \
+$(pkg-config --libs raylib) \
+-framework OpenGL \
+-framework Cocoa \
+-framework IOKit \
+-framework CoreVideo
 
 Or build and run in one command:
 
-```bash
-make run
-```
 
 ## Running
 
 ```bash
 ./main
-```
-
-Or use the run script:
-
-```bash
-./run.sh
 ```
 
 ## Controls
