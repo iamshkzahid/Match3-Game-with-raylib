@@ -1,48 +1,76 @@
-# Match3 Game with Raylib
+# Match-3 Game (C + raylib)
 
-A classic Match-3 puzzle game built with C and Raylib.
+A classic **Match-3 puzzle game** written in **C** using the **raylib** graphics and audio library.
+The game features smooth tile animations, score effects, background music, and sound effects.
 
-## Features
+This project includes a **pre-built macOS (Apple Silicon)** release and can also be built from source.
 
-- 8x8 game board with colorful ASCII tiles
-- Match 3 or more tiles horizontally or vertically
-- Score system with animated score popups
-- Background music and sound effects
-- Smooth tile falling animations
-- Visual feedback for matched tiles
+---
 
-## Requirements
+## 🎮 Gameplay Overview
 
-- macOS (tested on arm64)
-- GCC compiler
-- [Raylib](https://www.raylib.com/) library (install via Homebrew: `brew install raylib`)
+* 8×8 grid-based Match-3 board
+* Match **3 or more tiles** horizontally or vertically
+* Cascading tile fall animations after matches
+* Animated score popups and score scaling
+* Background music and sound effects
+* Mouse-based tile selection and swapping
 
-## Installation
+---
 
-### Clone the repository
+## 🕹️ Controls
 
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+* **Left Click** → Select a tile
+* **Left Click on adjacent tile** → Swap tiles
+* **ESC** → Quit the game
+* **Close Window** → Exit
+
+---
+
+## 📦 Download & Run (Recommended)
+
+Go to the **Releases** section of this repository and download:
+
+```
+Match3-macOS.zip
 ```
 
-### Install dependencies and build
+### Run Instructions
 
-**Option 1: Use the setup script (easiest)**
 ```bash
-./setup.sh
+unzip Match3-macOS.zip
+cd Match3-macOS
+./match3
 ```
 
-**Option 2: Manual setup**
+⚠️ **Platform Support**
+
+* macOS (Apple Silicon / arm64)
+* Windows & Linux are **not supported yet**
+
+---
+
+## 🛠️ Build From Source (Developers)
+
+### Requirements
+
+* macOS
+* GCC or Clang
+* Homebrew
+* raylib
+* pkg-config
+
+### Install Dependencies
+
 ```bash
-brew install raylib
-make
-```
-
-## Building
-
 brew install raylib pkg-config
+```
 
+### Build
+
+From the project root directory:
+
+```bash
 gcc src/main.c -o match3 \
 $(pkg-config --cflags raylib) \
 $(pkg-config --libs raylib) \
@@ -50,61 +78,87 @@ $(pkg-config --libs raylib) \
 -framework Cocoa \
 -framework IOKit \
 -framework CoreVideo
-
-Or build and run in one command:
-
-
-## Running
-
-```bash
-./main
 ```
 
-## Controls
+### Run
 
-- **Left Click**: Select a tile
-- **Left Click (adjacent tile)**: Swap tiles
-- **ESC Key**: Quit game
-- **Close Window**: Exit game
+```bash
+./match3
+```
 
-## Assets
+---
 
-The game requires the following assets in the `assets/` folder:
-- `background.jpg` - Background image
-- `04b03.ttf` - Font file
-- `bgm_old.mp3` - Background music
-- `match.mp3` - Match sound effect
+## 📁 Project Structure
 
-## Deployment / Distribution
+```
+Match3-Game-with-raylib/
+├── src/
+│   └── main.c
+├── assets/
+│   ├── background.jpg
+│   ├── 04b03.ttf
+│   ├── bgm_old.mp3
+│   └── match.mp3
+├── README.md
+└── .gitignore
+```
 
-### Creating a GitHub Release
+---
 
-To distribute your game to others:
+## 🔊 Assets
 
-1. Build the game: `make`
-2. Create a release on GitHub:
-   - Go to your repository on GitHub
-   - Click "Releases" → "Create a new release"
-   - Tag version (e.g., `v1.0.0`)
-   - Upload the compiled `main` binary
-   - Add release notes
-   - Publish
+The game requires the following files inside the `assets/` directory:
 
-### For Users to Run
+* `background.jpg` — Background image
+* `04b03.ttf` — Pixel font
+* `bgm_old.mp3` — Background music
+* `match.mp3` — Match sound effect
 
-Users can either:
-- **Option 1**: Clone and build (recommended)
-  ```bash
-  git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-  cd YOUR_REPO_NAME
-  brew install raylib
-  make
-  ./main
-  ```
+> Asset paths are **relative to the executable’s working directory**.
 
-- **Option 2**: Download pre-built binary from Releases (if you provide one)
+---
 
-## License
+## 🚀 Release Process (Maintainers)
 
-This project is open source and available for personal use.
+1. Build the executable
+2. Create release folder:
 
+   ```bash
+   mkdir Match3-macOS
+   cp match3 Match3-macOS/
+   cp -r assets Match3-macOS/
+   ```
+3. Zip it:
+
+   ```bash
+   zip -r Match3-macOS.zip Match3-macOS
+   ```
+4. Create a GitHub Release
+5. Tag version (example: `v1.0.0`)
+6. Upload `Match3-macOS.zip`
+
+---
+
+## 🧩 Known Limitations
+
+* macOS-only (Apple Silicon)
+* No Windows/Linux builds yet
+* No save/load system
+* No settings menu
+
+---
+
+## 🛣️ Roadmap
+
+* Windows build support
+* Sound & music toggle
+* High-score persistence
+* Improved animations
+* UI polish
+
+---
+
+## 📄 License
+
+MIT License
+Free to use, modify, and distribute with attribution.
