@@ -121,26 +121,6 @@ The game requires the following files inside the `assets/` directory:
 
 > Asset paths are **relative to the executable’s working directory**.
 
----
-
-## 🚀 Release Process (Maintainers)
-
-1. Build the executable
-2. Create release folder:
-
-   ```bash
-   mkdir Match3-macOS
-   cp match3 Match3-macOS/
-   cp -r assets Match3-macOS/
-   ```
-3. Zip it:
-
-   ```bash
-   zip -r Match3-macOS.zip Match3-macOS
-   ```
-4. Create a GitHub Release
-5. Tag version (example: `v1.0.0`)
-6. Upload `Match3-macOS.zip`
 
 ---
 
